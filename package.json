@@ -1,0 +1,15 @@
+{
+  "name": "get-password",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:MrZhangZc/get-password.git",
+  "author": "zhangzhichao <1761997216@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1"
+  }
+}
