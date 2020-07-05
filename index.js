@@ -1,11 +1,11 @@
 const { shuffle, initOptions, toArr, getRandomRes, testRange } = require('./util');
+const NUMBERS = '0123456789';
+const CHARS_LOWER = 'abcdefghijklmnopqrstuvwxyz';
+const CHARS_UPPER = CHARS_LOWER.toUpperCase();
+const SYMBOLS = "!@#$%^&*()[]";
 
 class getPassWord {
   constructor() {
-    this.NUMBERS = '0123456789';
-    this.CHARS_LOWER = 'abcdefghijklmnopqrstuvwxyz';
-    this.CHARS_UPPER = this.CHARS_LOWER.toUpperCase();
-    this.SYMBOLS = "!@#$%^&*()[]";
   }
 
   getMyPassWord(opts) {
@@ -23,16 +23,16 @@ class getPassWord {
 
     switch(type) {
       case 1 :
-        result += getRandomRes(this.NUMBERS, evertLen);
+        result += getRandomRes(NUMBERS, evertLen);
         break;
       case 2 :
-        result += getRandomRes(this.NUMBERS, evertLen) + getRandomRes(this.CHARS_LOWER, length - evertLen);
+        result += getRandomRes(NUMBERS, evertLen) + getRandomRes(CHARS_LOWER, length - evertLen);
         break;
       case 3 :
-        result += getRandomRes(this.NUMBERS, evertLen) + getRandomRes(this.CHARS_LOWER, evertLen) + getRandomRes(this.CHARS_UPPER, length - 2 * evertLen);
+        result += getRandomRes(NUMBERS, evertLen) + getRandomRes(CHARS_LOWER, evertLen) + getRandomRes(CHARS_UPPER, length - 2 * evertLen);
         break;
       case 4 :
-        result += getRandomRes(this.NUMBERS, evertLen) + getRandomRes(this.CHARS_LOWER, evertLen) + getRandomRes(this.CHARS_UPPER, evertLen) + getRandomRes(this.SYMBOLS, length - 3 * evertLen);
+        result += getRandomRes(NUMBERS, evertLen) + getRandomRes(CHARS_LOWER, evertLen) + getRandomRes(CHARS_UPPER, evertLen) + getRandomRes(SYMBOLS, length - 3 * evertLen);
         break;
     }
     
